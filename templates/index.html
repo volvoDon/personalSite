@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I Want What You Got</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Give Me Your Money!</h1>
+		<p>Listen up, folks! We're all guilty of wasting money on useless stuff, so why not give me your cash for absolutely no reason? That's right, I'm practically giving you the deal of a lifetime.
+        </p>
+        <h3>Give Me $1.00 and get nothing in return! Wow!</h3>
+		<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
+    <stripe-buy-button
+    buy-button-id="buy_btn_1Mq0gBEXdZPvnKFLSzb8yk4I"
+    publishable-key="pk_live_QI60Ip3FXrxupB6VZQldoaXu00g2cgpQKS"
+    >
+    </stripe-buy-button>
+    <h3>OR! $4.20 USD donation for highrollers (you still get NOTHING in return) What a deal!!!</h3>
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
+    <stripe-buy-button
+    buy-button-id="buy_btn_1Mq0sWEXdZPvnKFLCmJRPtSF"
+    publishable-key="pk_live_QI60Ip3FXrxupB6VZQldoaXu00g2cgpQKS"
+    >
+    </stripe-buy-button>
+    <h3>Are you hella rich full of crap and have nothing better to do with ur money</h3>
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
+    <stripe-buy-button
+    buy-button-id="buy_btn_1Mq0xiEXdZPvnKFLKR3B8nnZ"
+    publishable-key="pk_live_QI60Ip3FXrxupB6VZQldoaXu00g2cgpQKS"
+    >
+    </stripe-buy-button>
+	</div>
+    
+</body>
+</html>
