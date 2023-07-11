@@ -1,51 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>!!!GIVE ME YOUR MONEY!!!</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Your App Name</title>
+
+  <!-- Load Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">    
+  
+  <style>
+    /* Add any additional CSS you want here */
+    .hero {
+      height: 100vh;
+      background: url('static/Gradient.png') no-repeat;
+      background-size: cover; 
+      background-position: center;
+      background-size: auto;
+    }
+    
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      margin: 30px;
+    }
+
+    body {
+        font-family: "Roboto Mono";
+    }
+
+    .github-btn {
+  display: inline-block;
+  background-color: #24292e;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+    }
+
+    .github-btn:hover {
+    background-color: #444d56;
+    }
+
+    .project {
+        margin-left: 5%;
+        margin-top: 50px;
+    }
+
+    #profile-pic {
+    width: 200px;  /* Adjust size as needed */
+    border-radius: 50%;  /* Makes the image round */
+    margin-right: 20px; /* Add some space to the right of the image */
+    object-fit: cover;  /* Maintains aspect ratio of the image */
+    overflow: hidden;  /* Ensures nothing sticks out of the rounded image */
+    float: left;  /* Floats the image to the left */
+    }   
+
+    p {
+    text-align: justify;  /* Justify the text to distribute it evenly between the margins */
+    }
+
+    .about-content {
+    display: flex;
+    align-items: center;  /* Aligns the items vertically centered */
+    }
+
+
+  </style>
 </head>
 <body>
-	<div class="container">
-		<h1>Give Me Your Money!</h1>
-		<p>Listen up, folks! We're all guilty of wasting money on useless stuff, so why not give me your cash for absolutely no reason? 
-        </p>
-        <a font-size="24" href="/disclaimer">!!!!READ THE DISCLAIMER!!! (I WAS FORCED TO INCLUDE THIS BY LAWYERS WHO THINK YOU ARE TOO STUPID TO UNDERSTAND YOU WILL GET NOTHING IN RETURN FOR YOUR SWEET CASH)</a>
-        <h3>Give Me $1.00 and get nothing in return! Wow!</h3>
-		<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-    </script>
 
-    <stripe-buy-button
-    buy-button-id="buy_btn_1Mq0gBEXdZPvnKFLSzb8yk4I"
-    publishable-key="pk_live_QI60Ip3FXrxupB6VZQldoaXu00g2cgpQKS"
-    >
-    </stripe-buy-button>
-    <h3>OR! $4.20 USD donation for highrollers (you still get NOTHING in return) What a deal!!!</h3>
-    <script async
-    src="https://js.stripe.com/v3/buy-button.js">
-    </script>
+  <!-- Hero image with title and description -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Sam Segal</h1>
+      <p>Full Stack Web Developer & Electronic Music Enthusiast</p>
+      <!--<a href="/get-started" class="btn btn-primary btn-lg">Get Started</a>-->
+    </div>
+  </div>
 
-    <stripe-buy-button
-    buy-button-id="buy_btn_1Mq0sWEXdZPvnKFLCmJRPtSF"
-    publishable-key="pk_live_QI60Ip3FXrxupB6VZQldoaXu00g2cgpQKS"
-    >
-    </stripe-buy-button>
-    <h3>Are you hella rich and have nothing better to do with ur money (you get nothing)</h3>
-    <script async
-    src="https://js.stripe.com/v3/buy-button.js">
-    </script>
+  <!-- Additional sections -->
+  <section class="container my-5">
+    <div class="row">
+        <div class="col-12">
+          <!--<h2>About Me</h2>-->
+          <img src="static/web_profile_pic.png" alt="Profile Picture" id="profile-pic">
+          <p>I'm Sam Segal, a Full Stack Web Developer and fervent Electronic Music Enthusiast. I thrive at the intersection of technology and creativity, where I can bring my robust web development skills to the table while also composing captivating electronic soundscapes.
 
-    <stripe-buy-button
-    buy-button-id="buy_btn_1Mq0xiEXdZPvnKFLKR3B8nnZ"
-    publishable-key="pk_live_QI60Ip3FXrxupB6VZQldoaXu00g2cgpQKS"
-    >
-    </stripe-buy-button>
-    
+            My journey has taken me from a Bachelor's degree in Geology to an accelerated course in Computer Science fundamentals, and this diverse background has shaped me into the passionate generalist I am today. I speak the language of Python, C++, JavaScript, Rust, and Liquid with ease, and I am no stranger to the meticulous management of APIs and inventory. As a Webmaster, I've left my mark by strategically modifying front-ends and significantly improving site performance.
+            
+            But the code I write doesn't just exist on a screen - it also breathes life into music. I take great pride in my ability to craft layered electronic compositions, and my work in software instrument development using Rust is a testament to my technical prowess.
+            
+            To me, being a generalist isn't just about having a broad set of skills. It's about connecting the dots between different fields to solve complex problems and create something truly unique. I'm driven by a relentless curiosity and a desire to learn, and I firmly believe that my blend of technical expertise and creative passion sets me apart. Whether I'm coding a new web application or composing a new piece of music, I’m always looking to learn something new!
+            </p>
+        </div>
+      </div>    
+  </section>
 
-	</div>
-   
-    
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>FM 2.5</h3>
+            <p>FM sythesizer implemented in Rust with original DSP code</p>
+            <a href="https://github.com/volvoDon/FM_2.5/tree/main" class="github-btn">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Echo Chamber</h3>
+            <p>A wild digital delay implemented in Rust featuring a squelchy phaser </p>
+            <a href="https://github.com/volvoDon/echoChamber" class="github-btn">View on GitHub</a>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+  <!-- Add more sections as needed -->
+
+  <!-- Load Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
