@@ -11,6 +11,10 @@ def home():
 def test_image():
     return app.send_static_file('Gradient.png')
 
+@app.route('/resume')
+def resume_serve():
+    return app.send_static_file('resume.pdf')
+
     
 
 if __name__ == "__main__":
