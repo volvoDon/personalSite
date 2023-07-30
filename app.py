@@ -15,6 +15,11 @@ def test_image():
 def resume_serve():
     return app.send_static_file('resume.pdf')
 
+@app.route('/waveforecast')
+def wave_serve():
+    return app.send_static_file('WaveForcasting.pdf')
+
+
     
 
 if __name__ == "__main__":
