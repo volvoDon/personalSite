@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">Upload A XPL Thin Section In jpeg Format</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-info">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form action="/image-class" method="post" enctype="multipart/form-data">
+        <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="customFile" name="file">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+
+    {% if image_class %}
+    <h3 margin-top="10px">Predictions</h3>
+    <ul>
+        {% for item in image_class %}
+            {%if item.score %}
+            <li>Score: {{ item.score }} Name: {{ item.label }}</li>
+            {% else %}
+            <li>[MODEL SPOOLING UP]</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p>*Attention this is purely an example running on the HF inference API free tier Your first upload may fail as the model takes up to 20 seconds to Spool up!!!</p>
+    <a href="https://huggingface.co/volvoDon/petro-daemon">See the Hugging Face Repo Here For More Details</a>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.querySelector('#customFile').addEventListener('change', function() {
+        let label = this.value.split('\\').pop();
+        document.querySelector('.custom-file-label').textContent = label;
+    });
+</script>
+
+</body>
+</html>
